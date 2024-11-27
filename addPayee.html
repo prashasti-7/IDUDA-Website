@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Payee - ICICI Bank</title>
+  <link rel="stylesheet" href="addPayee.css">
+</head>
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo-container">
+        <img src="images/icici_logo.png" alt="Bank Logo" class="logo">
+      </div>
+      <div class="top-options">
+        <div class="toggle-container" style="display: flex; align-items: center; gap: 5px;">
+          <span>High Contrast</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleSwitch" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">English ▼</button>
+          <div class="dropdown-content">
+            <a href="#">Hindi</a>
+          </div>
+        </div>
+        <a href="#" class="icon-link">
+          <img src="images/location_on.png" alt="Location Icon" class="icon"> ATM/Branch
+        </a>
+        <div class="dropdown">
+          <button class="dropbtn">Customer Support ▼</button>
+          <div class="dropdown-content">
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Live Chat</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">About Us ▼</button>
+          <div class="dropdown-content">
+            <a href="#">Subsidiaries</a>
+            <a href="#">Directors</a>
+            <a href="#">Media Center</a>
+            <a href="#">Awards</a>
+            <a href="#">Social Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="menu-bar">
+      <ul>
+        <li><a href="#">Credit Cards</a></li>
+        <li><a href="#">Banking</a></li>
+        <li><a href="fundTransfer.html">Fund Transfer</a></li>
+        <li><a href="#">Lending</a></li>
+        <li><a href="#">Investing</a></li>
+        <li><a href="#">Wealth Management</a></li>
+        <li><a href="#">Open an Account</a></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <span>SHRUTI GUPTA▼</span>
+      <span class="last-logged">Last logged in: 05:53 PM (IST) 26/11/2024</span>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <h2>Add a Payee</h2>
+    <p>You can add all the accounts of the payee at one go! Start sending funds after 30 minutes.</p>
+
+    <div class="tabs">
+        <button class="tab active" id="axis-bank-tab">Axis Bank Payee</button>
+        <button class="tab" id="other-bank-tab">Other Bank Payees</button>
+    </div>
+      
+      <!-- Axis Bank Payee Form -->
+      <div id="axis-bank-form" class="form-container">
+        <h3>Add ICICI Bank Payee</h3>
+        <form>
+          <div class="form-group">
+            <label for="payee-name">Payee Account Name<span>*</span></label>
+            <input type="text" id="payee-name" placeholder="Enter payee account name">
+          </div>
+          <div class="form-group">
+            <label for="nickname">Nickname<span>*</span></label>
+            <input type="text" id="nickname" placeholder="Enter nickname">
+          </div>
+          <div class="form-group">
+            <label for="account-number">Account Number<span>*</span></label>
+            <input type="text" id="account-number" placeholder="Enter account number">
+          </div>
+          <div class="form-group">
+            <label for="confirm-account-number">Confirm Payee Account Number<span>*</span></label>
+            <input type="text" id="confirm-account-number" placeholder="Re-enter account number">
+          </div>
+          <div class="form-group">
+            <label for="mobile-number">Payee Registration alert to be sent on mobile number<span>*</span></label>
+            <input type="text" id="mobile-number" value="XXXXXXXX0004" readonly>
+          </div>
+          <div class="form-buttons">
+            <a type="button" class="back-btn" href="fundtransfer.html">Back</a>
+            <a type="submit" class="next-btn" href="fundtransfer.html">Next</a>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Other Bank Payee Form -->
+      <div id="other-bank-form" class="form-container" style="display: none;">
+        <h3>Add Other Bank Payee</h3>
+        <form>
+          <div class="form-group">
+            <label for="payee-name-other">Payee Account Name<span>*</span></label>
+            <input type="text" id="payee-name-other" placeholder="Enter payee account name">
+          </div>
+          <div class="form-group">
+            <label for="nickname-other">Payee Nickname<span>*</span></label>
+            <input type="text" id="nickname-other" placeholder="Enter nickname">
+          </div>
+          <div class="form-group">
+            <label for="account-type">Account Type<span>*</span></label>
+            <select id="account-type">
+              <option value="savings">Savings</option>
+              <option value="current">Current</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ifsc-code">Enter Payee Bank IFSC Code<span>*</span></label>
+            <div class="input-group">
+              <input type="text" id="ifsc-code" placeholder="Enter IFSC code">
+              <button type="button" class="search-btn">Search</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="account-number-other">Payee Account Number<span>*</span></label>
+            <input type="text" id="account-number-other" placeholder="Enter account number">
+          </div>
+          <div class="form-group">
+            <label for="confirm-account-number-other">Confirm Payee Account Number<span>*</span></label>
+            <input type="text" id="confirm-account-number-other" placeholder="Re-enter account number">
+          </div>
+          <div class="form-group">
+            <label for="mobile-number-other">Payee Registration alert to be sent on mobile number<span>*</span></label>
+            <input type="text" id="mobile-number-other" value="XXXXXXXX0004" readonly>
+          </div>
+          <div class="form-buttons">
+            <a type="button" class="back-btn" href="fundtransfer.html">Back</a>
+            <a type="submit" class="next-btn" href="fundtransfer.html">Next</a>
+          </div>
+        </form>
+      </div>
+       
+  </main>
+
+  <!-- <footer>
+    <p>© 2024 ICICI Bank. All Rights Reserved.</p>
+  </footer> -->
+  <script>
+    const axisTab = document.getElementById("axis-bank-tab");
+    const otherTab = document.getElementById("other-bank-tab");
+    const axisForm = document.getElementById("axis-bank-form");
+    const otherForm = document.getElementById("other-bank-form");
+  
+    axisTab.addEventListener("click", () => {
+      axisTab.classList.add("active");
+      otherTab.classList.remove("active");
+      axisForm.style.display = "block";
+      otherForm.style.display = "none";
+    });
+  
+    otherTab.addEventListener("click", () => {
+      otherTab.classList.add("active");
+      axisTab.classList.remove("active");
+      axisForm.style.display = "none";
+      otherForm.style.display = "block";
+    });
+    const toggleSwitch = document.getElementById('toggleSwitch');
+toggleSwitch.addEventListener('change', () => {
+  document.body.classList.toggle('high-contrast');
+});
+  </script>
+    <!-- <script src="static\app.js"></script> -->
+</body>
+</html>

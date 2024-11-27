@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Payments - ICICI Bank</title>
+    <link rel="stylesheet" href="billPayments.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+          <div class="logo-container">
+            <img src="images/icici_logo.png" alt="Bank Logo" class="logo">
+          </div>
+          <div class="top-options">
+            <div class="toggle-container" style="display: flex; align-items: center; gap: 5px;">
+              <span>High Contrast</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="toggleSwitch" />
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">English ▼</button>
+              <div class="dropdown-content">
+                <a href="#">Hindi</a>
+              </div>
+            </div>
+            <a href="#" class="icon-link">
+              <img src="images/location_on.png" alt="Location Icon" class="icon"> ATM/Branch
+            </a>
+            <div class="dropdown">
+              <button class="dropbtn">Customer Support ▼</button>
+              <div class="dropdown-content">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Live Chat</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">About Us ▼</button>
+              <div class="dropdown-content">
+                <a href="#">Subsidiaries</a>
+                <a href="#">Directors</a>
+                <a href="#">Media Center</a>
+                <a href="#">Awards</a>
+                <a href="#">Social Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="menu-bar">
+          <ul>
+            <li><a href="#">Credit Cards</a></li>
+            <li><a href="#">Banking</a></li>
+            <li><a href="fundTransfer.html">Fund Transfer</a></li>
+            <li><a href="#">Lending</a></li>
+            <li><a href="#">Investing</a></li>
+            <li><a href="#">Wealth Management</a></li>
+            <li><a href="#">Open an Account</a></li>
+          </ul>
+        </nav>
+        <div class="user-info">
+          <span>SHRUTI GUPTA▼</span>
+          <span class="last-logged">Last logged in: 05:53 PM (IST) 26/11/2024</span>
+        </div>
+      </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="fundTransfer.html">Money Transfer</a></li>
+                <li><a href="billPayments.html" class="active">Bill Payments</a></li>
+                <li><a href="#">Manage Payees</a></li>
+                <li><a href="#">Upcoming Transactions</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Bill Payments</h2>
+            <div class="bill-options-grid">
+                <div class="bill-option">
+                    <img src="images/electricity.png" alt="Electricity">
+                    <p>Electricity</p>
+                    <div class="hover-popup">
+                        Pay your electricity bills instantly and ensure uninterrupted power supply.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/credit_card.png" alt="Credit Card">
+                    <p>Credit Card</p>
+                    <div class="hover-popup">
+                        Clear your credit card dues conveniently and maintain a healthy credit score.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/mutual_funds.png" alt="Mutual Fund">
+                    <p>Mutual Fund</p>
+                    <div class="hover-popup">
+                        Invest in mutual funds or manage payments for existing investments seamlessly.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/insurance.png" alt="Insurance">
+                    <p>Insurance</p>
+                    <div class="hover-popup">
+                        Pay your insurance premiums on time and secure your peace of mind.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/postpaid.png" alt="Postpaid">
+                    <p>Postpaid</p>
+                    <div class="hover-popup">
+                        Pay your mobile postpaid bills effortlessly and stay connected.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/gas.png" alt="Gas">
+                    <p>Gas</p>
+                    <div class="hover-popup">
+                        Settle your gas bills quickly to keep your household running smoothly.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/dth.png" alt="DTH">
+                    <p>DTH</p>
+                    <div class="hover-popup">
+                        Recharge your DTH subscription and enjoy uninterrupted entertainment.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/water.png" alt="Water">
+                    <p>Water</p>
+                    <div class="hover-popup">
+                        Pay your water bills efficiently to keep the taps flowing.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/fastag.png" alt="Fastag">
+                    <p>Fastag</p>
+                    <div class="hover-popup">
+                        Recharge your Fastag for hassle-free toll payments on the go.
+                    </div>
+                </div>
+                <div class="bill-option">
+                    <img src="images/emi_payment.png" alt="Loan EMI Payment">
+                    <p>Loan EMI Payment</p>
+                    <div class="hover-popup">
+                        Pay your loan EMIs on time and manage your finances with ease.
+                    </div>
+                </div>
+            </div>            
+        </main>
+
+        <!-- Right Section -->
+        <aside class="right-section">
+            <div class="help-box">
+                <p><strong>Need Help?</strong></p>
+                <p>Select a category from the options above to proceed with payments.</p>
+            </div>
+        </aside>
+    </div>
+    <script>
+          const toggleSwitch = document.getElementById('toggleSwitch');
+    toggleSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+    </script>
+</body>
+
+</html>

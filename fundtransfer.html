@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fund Transfer - ICICI Bank</title>
+  <link rel="stylesheet" href="fundtransfer.css">
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo-container">
+        <img src="images/icici_logo.png" alt="Bank Logo" class="logo">
+      </div>
+      <div class="top-options">
+        <div class="toggle-container" style="display: flex; align-items: center; gap: 5px;">
+          <span>High Contrast</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleSwitch" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">English ▼</button>
+          <div class="dropdown-content-nav">
+            <a href="#">Hindi</a>
+          </div>
+        </div>
+        <a href="#" class="icon-link">
+          <img src="images/location_on.png" alt="Location Icon" class="icon"> ATM/Branch
+        </a>
+        <div class="dropdown">
+          <button class="dropbtn">Customer Support ▼</button>
+          <div class="dropdown-content-nav">
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Live Chat</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">About Us ▼</button>
+          <div class="dropdown-content-nav">
+            <a href="#">Subsidiaries</a>
+            <a href="#">Directors</a>
+            <a href="#">Media Center</a>
+            <a href="#">Awards</a>
+            <a href="#">Social Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="menu-bar">
+      <ul>
+        <li><a href="#">Credit Cards</a></li>
+        <li><a href="#">Banking</a></li>
+        <li><a href="fundTransfer.html">Fund Transfer</a></li>
+        <li><a href="#">Lending</a></li>
+        <li><a href="#">Investing</a></li>
+        <li><a href="#">Wealth Management</a></li>
+        <li><a href="#">Open an Account</a></li>
+      </ul>
+    </nav>
+
+    <div class="user-info">
+      <span>SHRUTI GUPTA▼</span>
+      <span class="last-logged">Last logged in: 05:53 PM (IST) 26/11/2024</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <ul>
+        <li><a href="fundTransfer.html" class="active">Money Transfer</a></li>
+        <li><a href="billPayments.html">Bill Payments</a></li>
+        <li><a href="#">Manage Payees</a></li>
+        <li><a href="#">Upcoming Transactions</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="transfer-options">
+        <div class="custom-dropdown">
+          <input type="text" placeholder="Type payee name" class="search-bar" id="search-bar">
+          <div class="dropdown-content">
+            <div class="dropdown-item" data-payee="Prashasti Gupta">Prashasti Gupta</div>
+            <div class="dropdown-item" data-payee="Bhavya Gupta">Bhavya Gupta</div>
+            <div class="dropdown-item" data-payee="Sanya Madan">Sanya Madan</div>
+            <div class="dropdown-item" data-payee="Shruti Gupta(self)">Shruti Gupta(self)</div>
+          </div>
+        </div>
+        <h3 style="padding-right: 5px;">OR</h3>
+        <!-- <button class="add-payee-btn">New Payee</button> -->
+        <a class="add-payee-btn" href="addPayee.html">Add Payee</a>
+      </div>
+
+      <!-- Transaction Form Section (Initially Hidden) -->
+      <div id="transaction-section" class="transaction-form" style="display: none;">
+        <h3>Enter Transaction Details</h3>
+        <form>
+          <div class="form-group">
+            <label for="transfer-from">Transfer From</label>
+            <select id="transfer-from">
+              <option value="account1">Account 1</option>
+              <option value="account2">Account 2</option>
+            </select>
+            <p class="error-message">Total available amount is ₹50,000</p>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" placeholder="₹">
+          </div>
+          <div class="form-group">
+            <label for="remarks">Remarks (optional)</label>
+            <input type="text" id="remarks" placeholder="Enter remarks">
+          </div>
+          <div class="form-group">
+            <label for="payment-date">Payment Date</label>
+            <input type="date" id="payment-date">
+          </div>
+          <div class="form-group">
+            <label for="payment-type">Payment Type</label>
+            <select id="payment-type">
+              <option value="one-time">One Time</option>
+              <option value="recurring">Recurring</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p>How would you like to get the OTP?</p>
+            <label><input type="radio" name="otp-method" value="sms" checked> SMS</label>
+            <label><input type="radio" name="otp-method" value="call"> Call</label>
+            <p class="info">OTP will be sent to your registered mobile number XXXXXXXXXX004</p>
+          </div>
+          <div class="form-group">
+            <label for="amount">OTP</label>
+            <input type="number" id="amount" placeholder="Enter OTP">
+          </div>
+          <div class="form-buttons">
+            <button type="button" class="cancel-btn">Cancel</button>
+            <button type="submit" class="proceed-btn">Proceed to pay</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- <div class="payee-filters">
+            <label><input type="radio" name="payees" checked> All Payees</label>
+            <label><input type="radio" name="payees"> Axis Bank Payees</label>
+            <label><input type="radio" name="payees"> Other Bank Payees</label>
+        </div> -->
+
+      <!-- <div class="info-box">
+            <p><strong>No payees in the favourites</strong></p>
+            <p>Transferring money regularly to someone? Save time by adding them to your favourite list. Just click on ⭐ next to their name.</p>
+        </div> -->
+    </main>
+
+    <!-- Right Section -->
+    <aside class="right-section">
+      <div class="help-box">
+        <p><strong>You have added payees but have not sent any funds yet. Need Help?</strong></p>
+        <p>Just click on “Pay” next to the payees added below to start sending funds or add a new payee using the “Add
+          Payee” Button.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="container">
+    <div class="chatbox">
+      <div class="chatbox__support">
+        <div class="chatbox__header">
+          <div class="chatbox__image--header">
+            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+          </div>
+          <div class="chatbox__content--header">
+            <h4 class="chatbox__heading--header">Chat support</h4>
+            <p class="chatbox__description--header">Hi. My name is iSuperPal. How can I help you?</p>
+          </div>
+        </div>
+        <div class="chatbox__messages">
+          <div></div>
+        </div>
+        <div class="chatbox__footer">
+          <input type="text" placeholder="Write a message..." id="chat-input">
+          <button class="chatbox__send--footer send__button">Send</button>
+        </div>
+      </div>
+      <div class="chatbox__button">
+        <button><img src="static/images/chatbox-icon.svg" /></button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const toggleSwitch = document.getElementById('toggleSwitch');
+    toggleSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const searchBar = document.getElementById("search-bar");
+      const dropdownContent = document.querySelector(".dropdown-content");
+      const dropdownItems = document.querySelectorAll(".dropdown-item");
+      const transactionSection = document.getElementById("transaction-section"); // Initialize the transaction section
+
+      dropdownContent.style.display = "none"; // Hide dropdown initially
+      transactionSection.style.display = "none"; // Hide transaction form initially
+
+      // Filter dropdown items based on input
+      searchBar.addEventListener("input", () => {
+        const filter = searchBar.value.toLowerCase();
+        let hasMatch = false;
+
+        dropdownItems.forEach((item) => {
+          if (item.textContent.toLowerCase().includes(filter)) {
+            item.style.display = "block";
+            hasMatch = true;
+          } else {
+            item.style.display = "none";
+          }
+        });
+
+        // Show dropdown if there's a match, hide otherwise
+        dropdownContent.style.display = hasMatch ? "block" : "none";
+      });
+
+      // Handle dropdown selection
+      dropdownItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          searchBar.value = item.textContent; // Set input field value
+          dropdownContent.style.display = "none"; // Hide dropdown
+          transactionSection.style.display = "block"; // Show transaction form
+        });
+      });
+
+      // Close dropdown if clicking outside
+      document.addEventListener("click", (e) => {
+        if (!searchBar.contains(e.target) && !dropdownContent.contains(e.target)) {
+          dropdownContent.style.display = "none";
+        }
+      });
+
+      // Open dropdown on input focus
+      searchBar.addEventListener("focus", () => {
+        dropdownContent.style.display = "block";
+      });
+    });
+
+  </script>
+  <script src="static\app.js"></script>
+
+</body>
+
+</html>

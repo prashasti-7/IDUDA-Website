@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Login Page</title>
+  <link rel="stylesheet" href="updated_landingPage1_style.css">
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="logo-container">
+        <img src="images/icici_logo.png" alt="Bank Logo" class="logo">
+      </div>
+      <div class="top-options">
+        <div class="toggle-container" style="display: flex; align-items: center; gap: 5px;">
+          <span>High Contrast</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleSwitch" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">English ▼</button>
+          <div class="dropdown-content">
+            <a href="#">Hindi</a>
+          </div>
+        </div>
+        <a href="#" class="icon-link">
+          <img src="images/location_on.png" alt="Location Icon" class="icon"> ATM/Branch
+        </a>
+        <div class="dropdown">
+          <button class="dropbtn">Customer Support ▼</button>
+          <div class="dropdown-content">
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Live Chat</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">About Us ▼</button>
+          <div class="dropdown-content">
+            <a href="#">Subsidiaries</a>
+            <a href="#">Directors</a>
+            <a href="#">Media Center</a>
+            <a href="#">Awards</a>
+            <a href="#">Social Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="menu-bar">
+      <ul>
+        <li><a href="#">Credit Cards</a></li>
+        <li><a href="#">Banking</a></li>
+        <li><a href="fundTransfer.html">Fund Transfer</a></li>
+        <li><a href="#">Lending</a></li>
+        <li><a href="#">Investing</a></li>
+        <li><a href="#">Wealth Management</a></li>
+        <li><a href="#">Open an Account</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="login-container">
+      <h1>Sign In</h1>
+      <form class="login-form">
+        <div class="input-group">
+          <label for="user-id">User ID</label>
+          <input type="text" id="user-id" name="user-id" placeholder="User ID" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="options">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">Remember User ID</label>
+        </div>
+        <button type="button" class="login-btn" onclick="location.href='updated_dashboard.html'">Sign In</button>
+        <div class="links">
+          <a href="#">Register / Activate</a> |
+          <a href="#">Forgot User ID</a> |
+          <a href="#">Forgot Password</a>
+        </div>
+        <div class="passwordless">
+          <a href="#">Passwordless Sign In</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 ICICI Bank. All Rights Reserved.</p>
+  </footer>
+  <script>
+    const toggleSwitch = document.getElementById('toggleSwitch');
+    toggleSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+  </script>
+</body>
+
+</html>

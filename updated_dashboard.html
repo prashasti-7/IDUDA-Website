@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="updated_dashboard_style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="top-header">
+        <div class="logo-container">
+          <img src="images/icici_logo.png" alt="Bank Logo" class="logo">
+        </div>
+        <div class="top-options">
+          <div class="toggle-container" style="display: flex; align-items: center; gap: 5px;">
+            <span>High Contrast</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggleSwitch">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">English ▼</button>
+            <div class="dropdown-content">
+              <a href="#">Hindi</a>
+            </div>
+          </div>
+          <a href="#" class="icon-link">
+            <img src="images/location_on.png" alt="Location" class="icon">
+            ATM/Branch
+          </a>
+          <div class="dropdown">
+            <button class="dropbtn">Customer Support ▼</button>
+            <div class="dropdown-content">
+              <a href="#">Contact Us</a>
+              <a href="#">FAQs</a>
+              <a href="#">Live Chat</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">About Us ▼</button>
+            <div class="dropdown-content">
+              <a href="#">Subsidiaries</a>
+              <a href="#">Directors</a>
+              <a href="#">Media Center</a>
+              <a href="#">Awards</a>
+              <a href="#">Social Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="menu-bar">
+        <ul>
+          <li><a href="#">Credit Cards</a></li>
+          <li><a href="#">Banking</a></li>
+          <li><a href="fundTransfer.html">Fund Transfer</a></li>
+          <li><a href="#">Lending</a></li>
+          <li><a href="#">Investing</a></li>
+          <li><a href="#">Wealth Management</a></li>
+          <li><a href="#">Open an Account</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="user-info">
+      <span>SHRUTI GUPTA▼</span>
+      <span class="last-logged">Last logged in: 05:53 PM (IST) 26/11/2024</span>
+    </div>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>ACCOUNTS</h3>
+        <p>Total Account Balance</p>
+        <p>******** <span class="icon"></span></p>
+      </div>
+      <div class="card">
+        <h3>DEPOSITS</h3>
+        <p>Total Deposits</p>
+        <p>******** <span class="icon"></span></p>
+      </div>
+      <div class="card">
+        <h3>DEMAT</h3>
+        <p>Total Value</p>
+        <p>******** <span class="icon"></span></p>
+      </div>
+      <div class="card">
+        <h3>CREDIT CARDS</h3>
+        <p>Apply for a credit card and enjoy host of benefits</p>
+        <a href="#" class="apply-now">APPLY NOW</a>
+      </div>
+    </div>
+
+    <div class="transactions">
+      <h2>Transactions</h2>
+      <div class="tabs">
+        <div class="tab active">Accounts</div>
+        <div class="tab">Credit Cards</div>
+        <div class="tab">Upcoming</div>
+      </div>
+      <div class="transaction-list">
+        <div class="transaction">
+          <p>25 Nov</p>
+          <p>UPI/P2A/237890653304/...</p>
+          <p class="amount">₹100.00</p>
+        </div>
+        <div class="transaction">
+          <p>24 Nov</p>
+          <p>UPI/P2M/432985116830/...</p>
+          <p class="amount">₹99.00</p>
+        </div>
+        <div class="transaction">
+          <p>24 Nov</p>
+          <p>UPI/P2A/432934041613/...</p>
+          <p class="amount">₹288.00</p>
+        </div>
+      </div>
+      <a href="#" class="view-all">VIEW ALL</a>
+    </div>
+
+    <div class="quick-links">
+      <a href="#" class="link-item">
+        <img src="account.svg" alt="Account" class="link-icon">
+        <span class="link-text">Accounts</span>
+      </a>
+      <a href="#" class="link-item">
+        <img src="transfer.svg" alt="Fund Transfer" class="link-icon">
+        <span class="link-text">Fund Transfers</span>
+      </a>
+      <a href="#" class="link-item">
+        <img src="bill-pay.svg" alt="Bill Payments" class="link-icon">
+        <span class="link-text">Bill Payments</span>
+      </a>
+      <a href="#" class="link-item">
+        <img src="loans.svg" alt="Loans" class="link-icon">
+        <span class="link-text">Loans</span>
+      </a>
+      <a href="#" class="link-item">
+        <img src="fd-rd.svg" alt="FD/RD" class="link-icon">
+        <span class="link-text">FD/RD</span>
+      </a>
+      <a href="#" class="link-item">
+        <img src="investments.svg" alt="Investments" class="link-icon">
+        <span class="link-text">Investments</span>
+      </a>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2024 ICICI Bank. All Rights Reserved.</p>
+  </footer>
+  <script>
+    const toggleSwitch = document.getElementById('toggleSwitch');
+    toggleSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+  </script>
+</body>
+</html>
